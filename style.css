@@ -1,0 +1,59 @@
+:root {
+    --clr-primary: hsl(0, 0%, 10%);
+    --clr-secondary: hsl(0, 0%, 80%);
+    --clr-white: hsl(100, 100%, 100%)
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.primary { background: var(--clr-primary); }
+.secondary { background: var(--clr-secondary); }
+.white { background: var(--clr-white); }
+
+body {
+    text-align: center;
+    height: 100vh;
+}
+
+.yeas {
+    width: clamp(5rem, 70vw, 100rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.yea {
+    margin: 5rem auto;
+    padding: 5rem;
+    border: 5px solid black;
+    box-shadow: 0 0 20px hsl(0, 0%, 0%, 0.3);
+}
+
+.yea:hover,
+.yea:focus {
+
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 500ms ease;
+}
+
+.yeah {
+    font-size: 5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 300px) {
+    .yeas {
+        width: clamp(2rem, 70vw, 80rem);
+    }
+    .yea {
+        padding: 35vh 0;
+    }
+}
